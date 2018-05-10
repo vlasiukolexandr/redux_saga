@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
+import Paper from 'material-ui/Paper'
+import FlatButton from 'material-ui/FlatButton'
 
 class Buttons extends Component {
 
@@ -11,7 +11,7 @@ class Buttons extends Component {
     margin: 20,
     textAlign: 'center',
     display: 'inline-block',
-  };
+  }
 
   return (<Paper style={style} zDepth={1} >
     <FlatButton onClick={this.props.onIncrementAsync}>

@@ -1,9 +1,13 @@
-export default function reducer(state = 0, action) {
+const initialState = {
+  counter: 0
+}
+
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return state + 1
+      return {counter: state.counter + 1}
     case 'DECREMENT':
-      return state - 1
+      return {counter: state.counter - 1}
     default:
       return state
   }

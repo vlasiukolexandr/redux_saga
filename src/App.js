@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Hello from './components/hello/Hello.js';
+import GetPictures from './components/GetPictures/GetPictures.js';
 import {List, ListItem} from 'material-ui/List';
 
 class App extends Component {
@@ -12,6 +13,8 @@ class App extends Component {
     switch (el) {
       case 1:
         return <Hello/>
+      case 2:
+        return <GetPictures/>
       default:
         return ''
 
@@ -21,12 +24,13 @@ class App extends Component {
     return (<div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
-        <h1 className="App-title">Welcome to React</h1>
+        <h1 className="App-title">Welcome Sagas study</h1>
       </header>
-        <List>
-          <ListItem primaryText="Counter" onClick={()=>this.setState({element: 1})}/>
-        </List>
-        {this.renderElement(this.state.element)}
+      <List>
+        <ListItem primaryText="Counter" onClick={() => this.setState({element: 1})}/>
+        <ListItem primaryText="Get Pictures" onClick={() => this.setState({element: 2})}/>
+      </List>
+      {this.renderElement(this.state.element)}
     </div>);
   }
 }
