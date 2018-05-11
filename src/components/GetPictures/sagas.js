@@ -1,22 +1,8 @@
-import { delay } from 'redux-saga'
-import { all, call, put, takeEvery } from 'redux-saga/effects'
+import { call, put, takeEvery } from 'redux-saga/effects'
+import {requestDog, requestDogSuccess, requestDogError} from '../../store/actions/actions.js'
 
-const requestDog = () => {
-  return {type: 'REQUESTED_DOG'}
-}
-const requestDogError = () => {
-  return {type: 'REQUESTED_DOG_FAILED'}
-}
-const requestDogSuccess = data => {
-  return {type: 'REQUESTED_DOG_SUCCEEDED', url: data.message}
-}
-
-const fetchDog = () => {
-  return { type: 'FETCHED_DOG' }
-};
 
 function* watchFetchDog() {
-  yield console.log('222')
   yield takeEvery('FETCHED_DOG', fetchDogAsync);
 }
 

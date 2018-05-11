@@ -1,10 +1,7 @@
 import React, {Component} from 'react'
-import {createStore, applyMiddleware} from 'redux'
 import {connect} from 'react-redux'
-import createSagaMiddleware from 'redux-saga'
 import FlatButton from 'material-ui/FlatButton'
 import Paper from 'material-ui/Paper'
-import {fetchDog} from '../sagas.js'
 
 class Pictures extends Component {
   render() {
@@ -24,7 +21,7 @@ class Pictures extends Component {
             ? <p>Loading...</p>
             : this.props.error
               ? <p>Error, try again</p>
-              : <p><img src={this.props.url} /></p>
+              : <p><img src={this.props.url} alt='picture'/></p>
         }
     </Paper>);
   }

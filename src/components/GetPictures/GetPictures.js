@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {createStore, applyMiddleware} from 'redux'
-import {connect} from 'react-redux'
 import Pictures from './components/Pictures.js'
 import reducer from '../../store/reducers/pictures'
 import createSagaMiddleware from 'redux-saga'
